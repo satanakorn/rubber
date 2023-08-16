@@ -1,0 +1,32 @@
+{% extends "index.html"%}
+
+{% block title %} raw rubber sheet  {% endblock %}
+
+{% block body%}
+
+<div class="menu-bar" >
+    <a class="menu-item" href ="/">หน้าหลัก</a>
+    <a class="menu-item" href ="/fresh_latex">ยางพาราสด</a>
+    <a class="menu-item" href ="/raw_rubber_sheet">ยางพาราแผ่น</a>
+</div>
+
+<div>
+    <h1>พยากรณ์ ราคายางแผ่นดิบ</h1>
+    <label for="dog-names">เลือกปีที่ต้องการ:</label>
+    <form action="/raw_rubber_sheet" method="POST">
+        <select name="years">
+            {% for year in list_year %}
+                <option value="{{ year }}" {% if selected_year == year %}selected{% endif %}>{{ year }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">ค้นหา</button>
+    </form> 
+    
+    <h3 name="test" style="text-align:center">ราคา พ.ศ. {{ selected_year }}</h3>
+    {% if selected_price %}
+        <h3 style="text-align:center">ราคายาง: {{ selected_price }}</h3>
+    {% endif %}
+
+</div>
+
+{% endblock %}

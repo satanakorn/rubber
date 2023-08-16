@@ -1,0 +1,23 @@
+div {text-align: center;}
+
+ /* Style for the menu bar */
+ .menu-bar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style for the individual menu items */
+.menu-item {
+    float: left;
+    margin: 0;
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.menu-item:hover {
+    background-color: #555;
+}
