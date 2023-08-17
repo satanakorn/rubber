@@ -21,3 +21,7 @@ div {text-align: center;}
 .menu-item:hover {
     background-color: #555;
 }
+
+.menu-bar { 
+    text-align: center;
+}
